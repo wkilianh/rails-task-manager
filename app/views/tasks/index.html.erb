@@ -1,0 +1,8 @@
+<h1>My Tasks</h1>
+<div style="padding: 20px; margin: 50px">
+  <% @tasks.each do |task| %>
+  <h3><%= link_to task.title, task_path(task[:id]) %></h3>
+  <p><%= task.completed ? "(x)" : "( )" %></p>
+  <% end %>
+</div>
+<%= link_to '+ create new task', tasks_new_path %>

@@ -1,0 +1,6 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p><%= @task.completed ? "(x) Task is completed" : "( ) Has to be done!" %></p>
+<%= link_to 'back to index', tasks_path %><br>
+<%= link_to 'Edit Task', edit_path(@task[:id])  %>
+<%= link_to '+ create new task', tasks_new_path %>
