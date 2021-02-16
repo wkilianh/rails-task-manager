@@ -1,9 +1,14 @@
-<%= form_for(@task) do |f| %>
+<%= simple_form_for(@task) do |f| %>
+<%= f.input :title %>
+<%= f.input :details %>
+<%= f.input :rating %>
+<%= f.submit %>
+<!--<%= form_for(@task) normal ruby see rest of line above would destroy comment %>
   <%= f.label :Title %>
   <%= f.text_field :title %>
   <%= f.label :Description %>
   <%= f.text_field :details %>
   <%= f.label :Done %>
   <%= f.check_box :completed %>
-  <%= f.submit %>
+  <%= f.submit %> -->
 <% end %>
